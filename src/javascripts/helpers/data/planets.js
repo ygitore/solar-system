@@ -1,0 +1,67 @@
+/* eslint-disable max-len */
+const planets = [{
+  name: 'Saturn',
+  imageUrl: 'https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/AW_187527_OUTERPLANETS_Saturn_doegjg.jpg',
+  description: 'Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant.',
+  isGasPlanet: true,
+  numberOfMoons: 62,
+  nameOfLargestMoon: 'Titan',
+},
+{
+  name: 'Venus',
+  imageUrl: 'https://i.ytimg.com/vi/CcS-2mJY7-g/maxresdefault.jpg',
+  description: 'Venus is the second planet from the Sun.',
+  isGasPlanet: true,
+  numberOfMoons: 0,
+  nameOfLargestMoon: '',
+},
+{
+  name: 'Mercury',
+  imageUrl: 'https://cdn.mos.cms.futurecdn.net/MTEiJvP99DScN3vkAsE9LA-320-80.jpg',
+  description: 'Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger of the gods',
+  isGasPlanet: true,
+  numberOfMoons: 0,
+  nameOfLargestMoon: '',
+},
+{
+  name: 'Mars',
+  imageUrl: 'https://kids.nationalgeographic.com/content/dam/kids/photos/articles/Space/H-P/everything-mars-tile.ngsversion.1488835803099.adapt.1900.1.jpg',
+  description: 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury.',
+  isGasPlanet: true,
+  numberOfMoons: 2,
+  nameOfLargestMoon: 'Phobos',
+},
+{
+  name: 'Earth',
+  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/1200px-The_Earth_seen_from_Apollo_17.jpg',
+  description: 'Earth our home is the third planet from the sun. Earth is the fifth largest of the planets in the solar system.',
+  isGasPlanet: true,
+  numberOfMoons: 1,
+  nameOfLargestMoon: 'Moon',
+},
+{
+  name: 'Jupiter',
+  imageUrl: 'https://resize.hswstatic.com/w_1024/gif/jupiter.jpg',
+  description: 'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun.',
+  isGasPlanet: true,
+  numberOfMoons: 67,
+  nameOfLargestMoon: 'Ganymede',
+},
+{
+  name: 'Neptune',
+  imageUrl: 'https://astrostyle.com/wp-content/uploads/2016/11/astrology-planets-neptune.jpg',
+  description: 'Neptune is the eighth and farthest known planet from the Sun in the Solar System. It is the third-most-massive planet, and the densest giant planet.',
+  isGasPlanet: true,
+  numberOfMoons: 14,
+  nameOfLargestMoon: 'Triton',
+},
+{
+  name: 'Uranus',
+  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg',
+  description: 'Uranus is the seventh planet from the Sun. Uranus have bulk chemical compositions which differ from that of the larger gas giants Jupiter and Saturn.',
+  isGasPlanet: true,
+  numberOfMoons: 27,
+  nameOfLargestMoon: 'Titania',
+}];
+const getPlanets = () => planets;
+export default { getPlanets };
