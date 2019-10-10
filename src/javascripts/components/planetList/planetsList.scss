@@ -1,0 +1,27 @@
+
+.input-field-for-search{
+  margin-top: 60px;
+  margin-left: 45%;
+  text-align: center;
+  width: 300px;
+}
+.planets-row{
+  margin-top: 20px;
+  .planet-card{   
+    height: 400px;
+    margin-bottom: 30px;
+    img{
+      height: 200px;
+      width: 100%;
+    }
+    .p-card{
+      height: 400px;
+      background-color: rgb(71, 48, 48);
+      color: white;
+      text-align: center;
+      .planet-name{
+        bottom: 20pxs;
+      }
+    }
+  }
+}
