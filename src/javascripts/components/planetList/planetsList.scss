@@ -8,19 +8,25 @@
 .planets-row{
   margin-top: 20px;
   .planet-card{   
-    height: 400px;
     margin-bottom: 30px;
-    img{
-      height: 200px;
+    width: 30%;
+    .planet-image{
+      display: none;
+      height: 100%;
       width: 100%;
+
     }
     .p-card{
-      height: 400px;
-      background-color: rgb(71, 48, 48);
+      height: 300px;
+      width: 100%;
+      background-color: rgb(31, 24, 24);
       color: white;
       text-align: center;
       .planet-name{
         bottom: 20pxs;
+      }
+      .description{
+        display: none;
       }
     }
   }
