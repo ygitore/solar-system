@@ -1,4 +1,15 @@
 
+#closeSinglePlanetPage{
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  font-size: 24px;
+  padding: 5px;
+  color: red;
+}
+.ppp{
+  font-size: 30px;
+}
 .input-field-for-search{
   margin-top: 60px;
   margin-left: 45%;
@@ -7,20 +18,19 @@
 }
 .planets-row{
   margin-top: 20px;
-  .planet-card{   
-    height: 400px;
+  .planet-card-column{   
     margin-bottom: 30px;
-    img{
-      height: 200px;
+    width: 30%;
+    height: 40%;
+    .planet-card{
+      height: 300px;
       width: 100%;
-    }
-    .p-card{
-      height: 400px;
-      background-color: rgb(71, 48, 48);
+      background-color: rgb(15, 13, 13);
       color: white;
       text-align: center;
-      .planet-name{
-        bottom: 20pxs;
+      .planet-image{
+        height: 200px;
+        width: 200px;
       }
     }
   }
