@@ -3,6 +3,7 @@ import planetData from './components/planetList/planetsList';
 
 const init = () => {
   planetData.createPlanetList();
-  planetData.showHide();
+  planetData.showImageOrName();
+  planetData.closePageButton();
 };
 init();
