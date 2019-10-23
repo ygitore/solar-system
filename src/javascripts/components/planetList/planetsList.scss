@@ -1,11 +1,11 @@
 
 #closeSinglePlanetPage{
   position: fixed;
-  right: 0px;
-  top: 0px;
+  right: 10px;
+  top: 10px;
   font-size: 24px;
   padding: 5px;
-  color: red;
+  color: rgb(112, 49, 49);
 }
 .ppp{
   font-size: 30px;
@@ -25,13 +25,31 @@
     .planet-card{
       height: 300px;
       width: 100%;
-      background-color: rgb(15, 13, 13);
+      background-color: rgb(3, 20, 43);
       color: white;
       text-align: center;
       .planet-image{
         height: 200px;
         width: 200px;
-      }
+        margin-left: auto;
+        margin-right: auto;
+        display: block;        
+      }      
+    }
+  }
+}
+
+#single-planet{
+  .single-planet-image-description{
+    text-align: center;
+    width: 80%;
+    margin: 20px;
+    #single-planet-image img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      height: 80%;
     }
   }
 }

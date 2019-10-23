@@ -5,5 +5,6 @@ const init = () => {
   planetData.createPlanetList();
   planetData.showImageOrName();
   planetData.closePageButton();
+  planetData.searchPlanet();
 };
 init();
