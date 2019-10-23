@@ -18,10 +18,11 @@ const createPlanetList = () => {
   utils.printToDom('planetsConstainer', domString);
   $('.planet-image').hide();
 };
+
+
 const singlePlanetDisplay = (e) => {
   const selectedId = $(e.target).closest('.planet-card')[0].id;
   // .closest('.planet-card') ==> go up to find the parent that matches the conditions.
-  console.log(selectedId);
   const planets = planet.getPlanets();
   let clickedPlanet = '';
   for (let i = 0; i < planets.length; i += 1) {
@@ -29,11 +30,13 @@ const singlePlanetDisplay = (e) => {
       clickedPlanet = planets[i];
     }
   }
-  let singlePlanetdomString = '<div id = "closeSinglePlanetPageDiv" class="closePage"><button id = "closeSinglePlanetPage">X</button></div>';
-  singlePlanetdomString += `<div id="single-planet-image"><img src = "${clickedPlanet.imageUrl}"></div>`;
-  singlePlanetdomString += `<div id="single-planet-description">${clickedPlanet.description}</div>`;
+  const singlePlanetdomString = ` <div id = "closeSinglePlanetPageDiv" class="closePage"><button id = "closeSinglePlanetPage">X</button></div>
+                                  <div class="single-planet-image-description"><div id="single-planet-image"><img src = "${clickedPlanet.imageUrl}"></div>
+                                    <div id="single-planet-description">${clickedPlanet.description}</div>
+                                  </div>`;
   return singlePlanetdomString;
 };
+
 const showImageOrName = () => {
   $('document').ready(() => {
     $('body').on('mouseenter', '.planet-card', (e) => {
@@ -61,4 +64,29 @@ const closePageButton = () => {
   });
 };
 
-export default { createPlanetList, showImageOrName, closePageButton };
+const searchPlanet = () => {
+  $('body').on('keydown', '#search', (e) => {
+    if (e.keyCode === 13) {
+      console.log('working');
+      const myPlanet = $('#search').val().toLowerCase();
+      const planetList = planet.getPlanets();
+      let searchResult = '';
+      for (let i = 0; i < planetList.length; i += 1) {
+        if (planetList[i].name.toLowerCase() === myPlanet) {
+          searchResult = planetList[i];
+          console.log(searchResult.name);
+        }
+        console.log(`this part is not working but planet name is: ${planetList[1].name}`);
+      }
+      if (searchResult !== '') {
+        const filterSinglePlanet = `<div>
+        <img src = "${searchResult.imageUrl}">
+        <div>${searchResult.description}</div></div>`;
+        utils.printToDom('planetsConstainer', filterSinglePlanet);
+      }
+    }
+  });
+};
+export default {
+  createPlanetList, showImageOrName, closePageButton, searchPlanet,
+};
