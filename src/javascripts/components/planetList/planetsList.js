@@ -66,24 +66,16 @@ const closePageButton = () => {
 
 const searchPlanet = () => {
   $('body').on('keydown', '#search', (e) => {
+    const myPlanet = $('#my-planet-search').val().toLowerCase();
     if (e.keyCode === 13) {
-      console.log('working');
-      const myPlanet = $('#search').val().toLowerCase();
-      const planetList = planet.getPlanets();
-      let searchResult = '';
-      for (let i = 0; i < planetList.length; i += 1) {
-        if (planetList[i].name.toLowerCase() === myPlanet) {
-          searchResult = planetList[i];
-          console.log(searchResult.name);
-        }
-        console.log(`this part is not working but planet name is: ${planetList[1].name}`);
-      }
-      if (searchResult !== '') {
-        const filterSinglePlanet = `<div>
-        <img src = "${searchResult.imageUrl}">
-        <div>${searchResult.description}</div></div>`;
-        utils.printToDom('planetsConstainer', filterSinglePlanet);
-      }
+      const pli = planet.getPlanets();
+      const searchResult = pli.filter((x) => x.name.toLowerCase().includes(myPlanet));
+      const filterSinglePlanet = `<div>
+          <img src = "${searchResult.imageUrl}">
+          <div>${searchResult.description}</div>
+        </div>`;
+      utils.printToDom('planetsConstainer', '');
+      utils.printToDom('filter-planet', filterSinglePlanet);
     }
   });
 };
