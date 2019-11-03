@@ -3,8 +3,8 @@ import $ from 'jquery';
 import utils from '../../helpers/utilities';
 import planet from '../../helpers/data/planets';
 
-const createPlanetList = () => {
-  const pl = planet.getPlanets();
+const createPlanetList = (pl) => {
+  // const pl = planet.getPlanets();
   let domString = '<div class="row planets-row">';
   for (let i = 0; i < pl.length; i += 1) {
     domString += `<div class = "col-4 planet-card-column">
@@ -63,20 +63,17 @@ const closePageButton = () => {
     $('#search').html('<input type="search" class="input-field-for-search" placeholder="search...">');
   });
 };
-
 const searchPlanet = () => {
-  $('body').on('keydown', '#search', (e) => {
-    const myPlanet = $('#my-planet-search').val().toLowerCase();
-    if (e.keyCode === 13) {
-      const pli = planet.getPlanets();
-      const searchResult = pli.filter((x) => x.name.toLowerCase().includes(myPlanet));
-      const filterSinglePlanet = `<div>
-          <img src = "${searchResult.imageUrl}">
-          <div>${searchResult.description}</div>
-        </div>`;
-      utils.printToDom('planetsConstainer', '');
-      utils.printToDom('filter-planet', filterSinglePlanet);
-    }
+  $('#search').on('keyup', () => {
+    const mySearch = $('#my-planet-search').val().toLowerCase();
+    const pli = planet.getPlanets();
+    const myPl = [];
+    pli.forEach((x) => {
+      if (x.name.toLowerCase().indexOf(mySearch) > -1 || x.description.toLocaleLowerCase().includes(mySearch)) {
+        myPl.push(x);
+      }
+    });
+    createPlanetList(myPl);
   });
 };
 export default {
