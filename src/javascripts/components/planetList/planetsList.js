@@ -57,7 +57,7 @@ const showImageOrName = () => {
 };
 const closePageButton = () => {
   $('body').on('click', '#closeSinglePlanetPage', () => {
-    createPlanetList();
+    createPlanetList(planet.getPlanets());
     utils.printToDom('single-planet', '');
     $('#single-planet').html('');
     $('#search').html('<input type="search" class="input-field-for-search" placeholder="search...">');

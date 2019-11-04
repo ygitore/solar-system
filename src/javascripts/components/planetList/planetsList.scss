@@ -11,8 +11,8 @@
   font-size: 30px;
 }
 .input-field-for-search{
-  margin-top: 60px;
-  margin-left: 45%;
+  margin-top: 20px;
+  margin-left: 44%;
   text-align: center;
   width: 300px;
 }
@@ -25,16 +25,20 @@
     .planet-card{
       height: 300px;
       width: 100%;
-      background-color: rgb(3, 20, 43);
+      background-color: rgb(0, 0, 0);
       color: white;
       text-align: center;
       .planet-image{
-        height: 200px;
+        height: 180px;
         width: 200px;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;        
+        margin: 50px auto;
+        display: block;      
       }      
+      .planet-name{
+        position: absolute;
+        top: 40%;
+        left: 40%;
+      }
     }
   }
 }
@@ -52,4 +56,9 @@
       height: 80%;
     }
   }
+}
+h1{
+  text-align: center;
+  color: white;   
+  margin-top: 40px;
 }
