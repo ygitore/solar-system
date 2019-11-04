@@ -1,4 +1,4 @@
-# solar-system
+# Solar-System
 ## Description
 created application that displays the name of all available planets in the list on page load. When hover over the planet name, it displays planet image and description of that particular planet. When we click on the planet, planet image and description open up in full view. We can also filter specific planet either by their name or description.
 #### Technologies used
